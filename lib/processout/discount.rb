@@ -168,7 +168,7 @@ module ProcessOut
         "amount"=> @amount, 
         "expires_at"=> @expires_at, 
         "metadata"=> @metadata, 
-        'coupon_id': coupon_id
+        'coupon_id'=> coupon_id
       }
 
       response = Response.new(request.post(path, data, options))

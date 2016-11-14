@@ -419,7 +419,7 @@ module ProcessOut
         "trial_end_at"=> @trial_end_at, 
         "return_url"=> @return_url, 
         "cancel_url"=> @cancel_url, 
-        'customer_id': customer_id
+        'customer_id'=> customer_id
       }
 
       response = Response.new(request.post(path, data, options))
@@ -454,8 +454,8 @@ module ProcessOut
         "trial_end_at"=> @trial_end_at, 
         "return_url"=> @return_url, 
         "cancel_url"=> @cancel_url, 
-        'customer_id': customer_id, 
-        'plan_id': plan_id
+        'customer_id'=> customer_id, 
+        'plan_id'=> plan_id
       }
 
       response = Response.new(request.post(path, data, options))
@@ -507,7 +507,7 @@ module ProcessOut
       path    = "/subscriptions/" + CGI.escape(@id) + ""
       data    = {
         "trial_end_at"=> @trial_end_at, 
-        'prorate': prorate
+        'prorate'=> prorate
       }
 
       response = Response.new(request.put(path, data, options))
@@ -533,8 +533,8 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions/" + CGI.escape(@id) + ""
       data    = {
-        'plan_id': plan_id, 
-        'prorate': prorate
+        'plan_id'=> plan_id, 
+        'prorate'=> prorate
       }
 
       response = Response.new(request.put(path, data, options))
@@ -559,7 +559,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions/" + CGI.escape(@id) + ""
       data    = {
-        'source': source
+        'source'=> source
       }
 
       response = Response.new(request.put(path, data, options))
@@ -584,7 +584,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions/" + CGI.escape(@id) + ""
       data    = {
-        'cancellation_reason': cancellation_reason
+        'cancellation_reason'=> cancellation_reason
       }
 
       response = Response.new(request.delete(path, data, options))
@@ -610,8 +610,8 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions/" + CGI.escape(@id) + ""
       data    = {
-        'cancel_at': cancel_at, 
-        'cancellation_reason': cancellation_reason
+        'cancel_at'=> cancel_at, 
+        'cancellation_reason'=> cancellation_reason
       }
 
       response = Response.new(request.delete(path, data, options))

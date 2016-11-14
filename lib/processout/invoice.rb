@@ -207,7 +207,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/invoices/" + CGI.escape(@id) + "/authorize"
       data    = {
-        'source': source
+        'source'=> source
       }
 
       response = Response.new(request.post(path, data, options))
@@ -230,7 +230,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/invoices/" + CGI.escape(@id) + "/capture"
       data    = {
-        'source': source
+        'source'=> source
       }
 
       response = Response.new(request.post(path, data, options))
@@ -275,7 +275,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/invoices/" + CGI.escape(@id) + "/customers"
       data    = {
-        'customer_id': customer_id
+        'customer_id'=> customer_id
       }
 
       response = Response.new(request.post(path, data, options))
@@ -409,7 +409,7 @@ module ProcessOut
         "request_shipping"=> @request_shipping, 
         "return_url"=> @return_url, 
         "cancel_url"=> @cancel_url, 
-        'customer_id': customer_id
+        'customer_id'=> customer_id
       }
 
       response = Response.new(request.post(path, data, options))
