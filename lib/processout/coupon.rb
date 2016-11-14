@@ -243,7 +243,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/coupons/" + CGI.escape(@id) + ""
       data    = {
-        "metadata": @metadata
+        "metadata"=> @metadata
       }
 
       response = Response.new(request.put(path, data, options))

@@ -115,7 +115,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/customers/" + CGI.escape(customer_id) + "/tokens"
       data    = {
-        "metadata": @metadata, 
+        "metadata"=> @metadata, 
         'source': source
       }
 
@@ -143,7 +143,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/customers/" + CGI.escape(customer_id) + "/tokens"
       data    = {
-        "metadata": @metadata, 
+        "metadata"=> @metadata, 
         'source': source, 
         'target': target
       }

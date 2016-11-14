@@ -137,9 +137,9 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions/" + CGI.escape(subscription_id) + "/discounts"
       data    = {
-        "amount": @amount, 
-        "expires_at": @expires_at, 
-        "metadata": @metadata
+        "amount"=> @amount, 
+        "expires_at"=> @expires_at, 
+        "metadata"=> @metadata
       }
 
       response = Response.new(request.post(path, data, options))
@@ -165,9 +165,9 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions/" + CGI.escape(subscription_id) + "/discounts"
       data    = {
-        "amount": @amount, 
-        "expires_at": @expires_at, 
-        "metadata": @metadata, 
+        "amount"=> @amount, 
+        "expires_at"=> @expires_at, 
+        "metadata"=> @metadata, 
         'coupon_id': coupon_id
       }
 

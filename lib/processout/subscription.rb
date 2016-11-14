@@ -410,15 +410,15 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions"
       data    = {
-        "cancel_at": @cancel_at, 
-        "name": @name, 
-        "amount": @amount, 
-        "currency": @currency, 
-        "metadata": @metadata, 
-        "interval": @interval, 
-        "trial_end_at": @trial_end_at, 
-        "return_url": @return_url, 
-        "cancel_url": @cancel_url, 
+        "cancel_at"=> @cancel_at, 
+        "name"=> @name, 
+        "amount"=> @amount, 
+        "currency"=> @currency, 
+        "metadata"=> @metadata, 
+        "interval"=> @interval, 
+        "trial_end_at"=> @trial_end_at, 
+        "return_url"=> @return_url, 
+        "cancel_url"=> @cancel_url, 
         'customer_id': customer_id
       }
 
@@ -445,15 +445,15 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions"
       data    = {
-        "cancel_at": @cancel_at, 
-        "name": @name, 
-        "amount": @amount, 
-        "currency": @currency, 
-        "metadata": @metadata, 
-        "interval": @interval, 
-        "trial_end_at": @trial_end_at, 
-        "return_url": @return_url, 
-        "cancel_url": @cancel_url, 
+        "cancel_at"=> @cancel_at, 
+        "name"=> @name, 
+        "amount"=> @amount, 
+        "currency"=> @currency, 
+        "metadata"=> @metadata, 
+        "interval"=> @interval, 
+        "trial_end_at"=> @trial_end_at, 
+        "return_url"=> @return_url, 
+        "cancel_url"=> @cancel_url, 
         'customer_id': customer_id, 
         'plan_id': plan_id
       }
@@ -506,7 +506,7 @@ module ProcessOut
       request = Request.new(@client)
       path    = "/subscriptions/" + CGI.escape(@id) + ""
       data    = {
-        "trial_end_at": @trial_end_at, 
+        "trial_end_at"=> @trial_end_at, 
         'prorate': prorate
       }
 
