@@ -199,6 +199,10 @@ module ProcessOut
       self.created_at = data.fetch(:created_at, nil)
       self.activated_at = data.fetch(:activated_at, nil)
       self.iterate_at = data.fetch(:iterate_at, nil)
+      self.coupon_id = nil
+      self.source_id = nil
+      self.prorate = nil
+      self.proration_date = nil
       
     end
 
