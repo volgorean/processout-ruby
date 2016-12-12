@@ -32,6 +32,10 @@ module ProcessOut
     attr_reader :created_at
     attr_reader :activated_at
     attr_reader :iterate_at
+    attr_accessor :coupon_id
+    attr_accessor :source_id
+    attr_accessor :prorate
+    attr_accessor :proration_date
 
     
     def id=(val)
@@ -637,8 +641,8 @@ module ProcessOut
         "interval" => @interval, 
         "trial_end_at" => @trial_end_at, 
         "metadata" => @metadata, 
-        "coupon_id" => options.fetch(:coupon_id, @coupon), 
-        "source" => options.fetch(:source, @source), 
+        "coupon_id" => options.fetch(:coupon_id, @coupon_id), 
+        "source" => options.fetch(:source, @source_id), 
         "prorate" => options.fetch(:prorate, @prorate), 
         "proration_date" => options.fetch(:proration_date, @proration_date)
       }
