@@ -637,10 +637,10 @@ module ProcessOut
         "interval" => @interval, 
         "trial_end_at" => @trial_end_at, 
         "metadata" => @metadata, 
-        "coupon_id" => options.fetch(:coupon_id, nil), 
-        "source" => options.fetch(:source, nil), 
-        "prorate" => options.fetch(:prorate, nil), 
-        "proration_date" => options.fetch(:proration_date, nil)
+        "coupon_id" => options.fetch(:coupon_id, @coupon), 
+        "source" => options.fetch(:source, @source), 
+        "prorate" => options.fetch(:prorate, @prorate), 
+        "proration_date" => options.fetch(:proration_date, @proration_date)
       }
 
       response = Response.new(request.put(path, data, options))
